@@ -34,6 +34,8 @@ Portfolio/
 ## Live Site
  
 https://jstephens-create.github.io/Portfolio/
+
+Photography: https://jstephens-create.github.io/Portfolio/photography.html
  
 ## Future Improvements
  
