@@ -38,10 +38,22 @@ content="width=device-width, initial-scale=1.0">
         </section>
 
         <section id="work">
-        <h2>Photos</h2>
+        <h2>Street Photos</h2>
+        <div class="photo-row">
+        <figure class="viewer">
+        <button class="viewer-frame" id="photo-link" type="button" aria-label="Next photo">
+        <img id="photo" src="photography_urban/100_0405.JPG" alt="Photo 1 of 28">
+        </button>
+        <figcaption class="viewer-bar">
+        <button type="button" id="prev" aria-label="Previous photo">&larr; PREV</button>
+        <span id="count">1 / 28</span>
+        <button type="button" id="next" aria-label="Next photo">NEXT &rarr;</button>
+        </figcaption>
+        </figure>
         <div class="project">
-        <h3>[Placeholder] Photo Title</h3>
-        <p>[Placeholder] Where and when it was taken.</p>
+        <h3>[Placeholder] Series Title</h3>
+        <p>[Placeholder] Describe this set of photos.</p>
+        </div>
         </div>
         </section>
         </main>
@@ -51,5 +63,62 @@ content="width=device-width, initial-scale=1.0">
 <footer>
 <p>&copy; 2026 Jordan Stephens</p>
 </footer>
+
+<script>
+// Photos in photography_urban/. Add or remove a file name here when the folder changes.
+const photos = [
+"100_0405.JPG",
+"6375CB4D-5103-4B2A-869A-E1281467A505.JPG",
+"IMG_0017.JPG",
+"IMG_0039.JPG",
+"IMG_0042.JPG",
+"IMG_0077.JPG",
+"IMG_0130.jpg",
+"IMG_0132.jpg",
+"IMG_0162 (1).JPG",
+"IMG_0201.JPG",
+"IMG_0221.JPG",
+"IMG_0344.JPG",
+"IMG_0462.JPG",
+"IMG_0467.JPG",
+"IMG_0468.JPG",
+"IMG_1384.JPG",
+"IMG_1388.JPG",
+"IMG_1406.JPG",
+"IMG_1515.JPG",
+"IMG_1599.JPG",
+"IMG_1600.JPG",
+"IMG_1831.JPG",
+"IMG_2770.JPG",
+"IMG_2888.JPG",
+"IMG_2889.JPG",
+"IMG_2899.JPG",
+"IMG_3376.jpg",
+"IMG_3394.jpg"
+];
+
+const img = document.getElementById("photo");
+const count = document.getElementById("count");
+let index = 0;
+
+function show(n) {
+  index = (n + photos.length) % photos.length;
+  img.src = "photography_urban/" + photos[index];
+  img.alt = "Photo " + (index + 1) + " of " + photos.length;
+  count.textContent = (index + 1) + " / " + photos.length;
+  // Warm the browser cache for the next photo so switching feels instant.
+  new Image().src = "photography_urban/" + photos[(index + 1) % photos.length];
+}
+
+document.getElementById("photo-link").addEventListener("click", () => show(index + 1));
+document.getElementById("prev").addEventListener("click", () => show(index - 1));
+document.getElementById("next").addEventListener("click", () => show(index + 1));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") show(index - 1);
+  if (e.key === "ArrowRight") show(index + 1);
+});
+
+show(0);
+</script>
 </body>
 </html>
