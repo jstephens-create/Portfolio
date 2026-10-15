@@ -33,11 +33,8 @@ Portfolio/
  
 ## Live Site
 
-https://jstephens-create.github.io/Portfolio/index.html#about
+https://jstephens-create.github.io/Portfolio/
 
-
-
- 
 ## Future Improvements
  
 - Improved accessibility
