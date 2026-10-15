@@ -33,10 +33,10 @@ Portfolio/
  
 ## Live Site
 
-https://jstephens-create.github.io/Portfolio/ 
+https://jstephens-create.github.io/Portfolio/index.html#about
 
 
-Photography: https://jstephens-create.github.io/Portfolio/photography.html
+
  
 ## Future Improvements
  
