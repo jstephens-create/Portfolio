@@ -1,51 +1,58 @@
 # Jordan Stephens Portfolio
- 
-A personal portfolio website showcasing my projects, skills, and growth as an aspiring developer and data professional.
- 
+
+A personal portfolio website showcasing Jordan Stephens's projects, technical interests, and creative work.
+
 ## About
- 
-This portfolio was built to demonstrate my experience with web development, problem-solving, and project organization. It serves as a central location for my work, technical interests, and professional background.
- 
+
+This portfolio demonstrates web development, creative problem-solving, visual experimentation, photography, and project organization.
+
 ## Features
- 
+
 - About section
-- Projects section
+- Selected projects
 - Contact section
 - Responsive navigation
+- TouchDesigner project archive
+- Photography collections with keyboard-accessible galleries
 - Multi-page website structure
- 
+
 ## Technologies Used
- 
+
 - HTML5
 - CSS3
+- JavaScript
 - Git
-- GitHub
- 
+- GitHub Pages
+
 ## Project Structure
- 
-```
+
+```text
 Portfolio/
 ├── index.html
-├── howykjordan.html
+├── touchdesigner.html
+├── photography.html
+├── Aliases.html
+├── project-title.html
 ├── style.css
-└── images/
+├── script.js
+├── images/
+├── videos/
+├── photography_Architecture/
+└── photography_urban/
 ```
- 
+
 ## Live Site
 
-https://jstephens-create.github.io/Portfolio/index.html#about
+[Portfolio](https://jstephens-create.github.io/Portfolio/)
 
+[Photography](https://jstephens-create.github.io/Portfolio/photography.html)
 
-
- 
 ## Future Improvements
- 
-- Improved accessibility
+
 - Additional project case studies
-- Mobile optimization
-- Enhanced navigation
- 
+- Broader media codec support
+- Further accessibility refinements
+
 ## Author
- 
+
 Jordan Stephens
- 
