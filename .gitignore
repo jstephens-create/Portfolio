@@ -1,1 +1,7 @@
 videos/beauty1.0.mov
+*.mov
+.venv/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
