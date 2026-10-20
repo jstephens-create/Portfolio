@@ -1,23 +1,20 @@
 <!--
 Sync Impact Report
 ==================
-Version change: (unversioned template) → 1.0.0
-Bump rationale: First ratification. All placeholders replaced with project-specific governance.
+Version change: 1.0.0 → 1.1.0
+Bump rationale: MINOR — added a new permitted media type (PDF professional documents) under
+an existing principle. No principle redefined, removed, or renumbered.
 
-Modified principles (template slot → adopted title):
-- [PRINCIPLE_1_NAME] → I. Static, Dependency-Free Delivery
-- [PRINCIPLE_2_NAME] → II. Accessible by Default (NON-NEGOTIABLE)
-- [PRINCIPLE_3_NAME] → III. Progressive Enhancement
-- [PRINCIPLE_4_NAME] → IV. One Design System
-- [PRINCIPLE_5_NAME] → V. Media & Performance Discipline
+Modified principles:
+- V. Media & Performance Discipline — added a "Documents" bullet permitting PDF resumes and
+  other professional documents in `documents/`, bounded by a 10 MB limit and a pre-commit
+  privacy review.
 
-Added sections:
-- Technical Constraints (was [SECTION_2_NAME])
-- Development Workflow & Quality Gates (was [SECTION_3_NAME])
-- Governance (filled)
+Modified sections:
+- Technical Constraints → File layout — added `documents/` to the listed folders.
 
+Added sections: none
 Removed sections: none
-
 Deferred items / TODOs: none
 -->
 
@@ -92,6 +89,9 @@ Media MUST be web-ready before it is committed.
   MUST use `loading="lazy"`.
 - Video MUST be MP4 (H.264) or WebM; source formats such as `.mov` MUST stay out of the
   repository (enforced via `.gitignore`).
+- Documents MUST be PDF, placed in `documents/`, and limited to professional materials (resume,
+  case-study artifacts). Each PDF MUST be under 10 MB and MUST be reviewed before commit to
+  confirm it contains only information already approved for public display.
 - Any individual committed asset over 10 MB requires a stated justification in the commit
   message.
 - When `style.css` or `script.js` changes, the `?v=` cache-busting query on every page that
@@ -107,8 +107,8 @@ committed is a byte a visitor downloads.
   live at `https://jstephens-create.github.io/Portfolio/`.
 - **Browser support**: current evergreen Chrome, Edge, Firefox, and Safari (desktop and mobile).
 - **File layout**: top-level `.html` pages, shared `style.css` and `script.js`, media in
-  `images/`, `videos/`, and `photography_*/` folders. New media collections follow the
-  `photography_<collection>/` naming pattern.
+  `images/`, `videos/`, `documents/`, and `photography_*/` folders. New media collections
+  follow the `photography_<collection>/` naming pattern.
 - **Secrets & privacy**: no API keys, tracking scripts, or analytics. Only contact details the
   author intends to publish may appear on pages.
 
@@ -147,4 +147,4 @@ task conflicts with it, the constitution wins until it is amended.
 - **Review cadence**: the constitution is reviewed whenever a new page type, media type, or
   external dependency is proposed.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-20 | **Last Amended**: 2026-10-20
+**Version**: 1.1.0 | **Ratified**: 2026-10-20 | **Last Amended**: 2026-10-20
